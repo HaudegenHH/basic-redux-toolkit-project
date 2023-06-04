@@ -38,4 +38,15 @@ npm i react-redux
 - in main.jsx (or index.js if you used CRA) import Provider and wrap the App component with it
 - then import the store and specify it as a prop on the Provider
 - since the Provider uses the Context Api under the hood, it is typically at the top of the component tree and will provide the store to every component
-   
+
+Thats what it takes to connect the react app with redux.
+
+You can now start reading values from and dispatch actions to the store.
+
+Next is the useSelector hook, which is used to conveniently access any state managed in Redux memory.
+
+If you wanted to access the numOfCakes which is stored in the cakesSlice and displayed in the CakeView component.
+
+- in the CakeView.jsx import useSelector from react-redux
+- it takes a fn as a parameter, which is called: selector function, and receives the state as its argument and returns a value from the state
+- since numOfCakes is part of the cakeSlice and the store is refering to its reducers name, "cake", the fn has to return state.cake.numOfCakes to get access to the desired value.
