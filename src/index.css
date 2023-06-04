@@ -40,6 +40,10 @@ h1 {
   line-height: 1.1;
 }
 
+li {
+  list-style: none;
+}
+
 button {
   border-radius: 8px;
   border: 2px solid transparent;
