@@ -86,7 +86,18 @@ For example: Instead of restocking the (eg) numOfIcecreams by a fixed number, le
 Again: createAsyncThunk dispatches the lifecycle methods of a promise  as actions
 - thus you have 3 cases for the "extraReducer":
 fetchUsers.pending, fetchUsers.fulfilled and fetchUsers.rejected
-- finally you export the async action thunk and the reducer as default
+- then you export the async action thunk and the reducer as default
 
 - finally display the list of users in the UserView component, which will be a combination of the useSelector and the useDispatch hook coupled with the useEffect hook (with an empty dependency array so that useEffect only runs once after the components mounts)
+
+---
+
+Use of Typescript
+
+- created branch "ts_support"
+- installed neccessary libraries
+  
+```sh
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+```
 
